@@ -1,0 +1,10 @@
+<%- include("partials/header")%>
+
+<h1>Home</h1>
+  <% posts.forEach((post)=> { %>
+<h3><%= post.title%></h3>
+<% let str = post.postBody.slice(0,100) %>
+<p><%= str %> ... <a href="/posts/<%= post.title %>">Read More</a></p>
+<% }) %>
+
+<%- include("partials/footer")%>
